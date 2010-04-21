@@ -195,10 +195,10 @@ class Tweeted_Admin extends Tweeted {
 		<input type="hidden" name="tweeted[version]" value="<?php echo $this->version; ?>" />
 		<input type="hidden" name="tweeted[run_status]" value="on" />
 		
-		<h3><? _e('Theme Settings'); ?></h3>
+		<h3><?php _e( 'Theme Settings' ); ?></h3>
 		<table class="form-table">
 			<tr valign="top">
-				<th scope="row"><?php _e('Default Theme'); ?></label></th>
+				<th scope="row"><?php _e( 'Default Theme' ); ?></th>
 				<td>
 					<select name="tweeted[theme]" id="tweeted_theme" class="postform">
 					<?php
@@ -214,7 +214,7 @@ class Tweeted_Admin extends Tweeted {
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><?php _e('Custom CSS') ?></th>
+				<th scope="row"><?php _e( 'Custom CSS' ) ?></th>
 				<td>
 					<input type="checkbox" value="1"<?php checked('1', $this->get_option('default_css')); ?> id="tweeted_default_css" name="tweeted[default_css]"/> <label for="tweeted_default_css"><?php _e("Check this box if you want to use your own CSS."); ?></label>
 				</td>
@@ -222,11 +222,11 @@ class Tweeted_Admin extends Tweeted {
 		</table>
 		<br/>
 		
-		<h3><? _e('Other Settings'); ?></h3>
+		<h3><?php _e( 'Other Settings' ); ?></h3>
 		<table class="form-table">
 			<!--
 			<tr valign="top">
-				<th scope="row"><?php _e('Status') ?></th>
+				<th scope="row"><?php _e('Status'); ?></th>
 				<td>
 				<?php
 					$run_statuss = array('on' => __("On"), 'off' => __('Off'));
@@ -240,13 +240,13 @@ class Tweeted_Admin extends Tweeted {
 			</tr>
 			-->
 			<tr valign="top">
-				<th scope="row"><?php _e('Support Tweeted') ?></th>
+				<th scope="row"><?php _e( 'Support Tweeted' ) ?></th>
 				<td>
 					<input type="checkbox" value="1"<?php checked('1', $this->get_option('show_props')); ?> id="tweeted_show_props" name="tweeted[show_props]"/> <label for="tweeted_show_props"><?php _e("We love link love, so if you want to support the folks that brought you Tweeted, please leave this checked. Thanks! .. and enjoy the plugin :)"); ?></label>
 				</td>
 			</tr>
 			<tr valign="top">
-				<th scope="row"><?php _e('Date Format') ?></th>
+				<th scope="row"><?php _e( 'Date Format' ) ?></th>
 				<td>
 					<input type="text" value="<?php echo $this->get_option('date_format'); ?>" id="tweeted_date_format" name="tweeted[date_format]"/ ><br /> <label for="tweeted_date_format"><?php _e('Set this to the date and time format you want to use on the tweet output. <a href="http://codex.wordpress.org/Formatting_Date_and_Time" title="Documentation on date formatting">Documentation on date formatting.</a>'); ?></label>
 				</td>
@@ -254,6 +254,16 @@ class Tweeted_Admin extends Tweeted {
 		</table>
 		<br/>
 		
+		<h3><?php _e( 'Example' ); ?></h3>
+		<table class="form-table">
+			<tr valign="top">
+				<td>
+					[tweeted]http://twitter.com/wpvibe/status/12556071704[/tweeted]
+				</td>
+			</tr>
+		</table>
+		<br/>
+			
 		<p class="submit">
 			<input type="submit" name="tweeted-submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
 		</p>
@@ -261,7 +271,7 @@ class Tweeted_Admin extends Tweeted {
 		</form>
 		
 		<!--
-		<h3><?php _e('Preview'); ?></h3>
+		<h3><?php _e( 'Preview' ); ?></h3>
 		<p><?php _e("Certain elements will not be correct because of this being in the 'admin area'. Be sure to view a post or page for an exact output."); ?></p>
 		
 		<?php 
