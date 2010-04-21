@@ -1,7 +1,7 @@
 === Tweeted From Twitter ===
 Contributors: ShaneF, jdingman, dremeda
 Tags: twitter, tweet, tweets, post, page
-Requires at least: 2.9.1
+Requires at least: 2.9
 Tested up to: 3.0.0
 Stable tag: 1.0.0
 
@@ -30,14 +30,19 @@ And that is is!
 1. Light Theme
 2. Dark Theme
 
+== Frequently Asked Questions ==
+
+= How do I use this plugin? =
+Simply include a line in your post or page that looks like this, [tweeted]http://twitter.com/wpvibe/status/12556071704[/tweeted], which has the tweet which you want to embed in it.  (note, this is just an example link, use your own link)
+
 == Upgrade ==
 
 === Automatic ===
 1. Use the plugin updater in WordPress or...
 
 === Manual ===
-1. Delete the previous `<tweeted folder>` folder from the `/wp-content/plugins/` directory
-2. Upload the new `<tweeted folder>` folder to the `/wp-content/plugins/` directory
+1. Delete the previous `tweeted` folder from the `/wp-content/plugins/` directory
+2. Upload the new `tweeted` folder to the `/wp-content/plugins/` directory
 
 == Usage ==
 
