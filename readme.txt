@@ -1,6 +1,6 @@
-=== Tweeted From Twitter ===
+=== Tweeted - Embed Tweets from Twitter ===
 Contributors: ShaneF, jdingman, dremeda
-Tags: twitter, tweet, tweets, post, page
+Tags: twitter, tweets, tweet, tweeted, embed, include, post, page
 Requires at least: 2.9
 Tested up to: 3.0.0
 Stable tag: 1.0.0
@@ -11,7 +11,7 @@ This plugin will allow you to easily embed tweets on on a post or page.  Note, t
 
 It automatically styles the twitter posts to one of the many default designs we offer. A theme can override the twitter post design as well by hooking into a filter. (Read Usage Section)
 
-Props to [Jonathan Dingman] and [Dre Armeda] (http://wpvibe.com/) for the idea behind this plugin, testing and feedback. [Dre Armeda] did all of our twitter output designs.
+Props to Jonathan Dingman and Dre Armeda (http://wpvibe.com/) for the idea behind this plugin, testing and feedback. Dre Armeda did all of our twitter output designs.
 
 == Installation ==
 
