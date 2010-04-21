@@ -35,9 +35,7 @@ And that is is!
 == Frequently Asked Questions ==
 
 = How do I use this plugin? =
-Simply include a line in your post or page that looks like this, [tweeted]http://twitter.com/wpvibe/status/12556071704
-
-[/tweeted], which has the tweet which you want to embed in it.  (note, this is just an example link, use your own link)
+Simply include a line in your post or page that looks like this, [tweeted]http://twitter.com/wpvibe/status/12556071704[/tweeted], which has the tweet which you want to embed in it.  (note, this is just an example link, use your own link)
 
 == Upgrade Notice ==
 
