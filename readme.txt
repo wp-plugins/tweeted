@@ -1,14 +1,13 @@
 === Tweeted From Twitter ===
-Contributors: ShaneF, jdingman
-Donate Link: http://bugssite.org/donate
+Contributors: ShaneF, jdingman, dremeda
 Tags: twitter, tweet, tweets, post, page
 Requires at least: 2.9.1
-Tested up to: 2.9.1
+Tested up to: 3.0.0
 Stable tag: 1.0.0
 
 == Description ==
 
-This plugin allows you to insert a Twitter post without having to copy and paste the status update from Twitter.
+This plugin will allow you to easily embed tweets on on a post or page.  Note, this will only embed a single tweet, not the latest tweet.
 
 It automatically styles the twitter posts to one of the many default designs we offer. A theme can override the twitter post design as well by hooking into a filter. (Read Usage Section)
 
@@ -16,7 +15,7 @@ Props to [Jonathan Dingman] and [Dre Armeda] (http://wpvibe.com/) for the idea b
 
 == Installation ==
 
-Requires PHP5 or greated to activate.
+Requires PHP5 or greater to activate.
 
 Use the WordPress plugin install or...
 
@@ -28,30 +27,28 @@ And that is is!
 
 == Screenshots ==
 
+1. Light Theme
+2. Dark Theme
+
 == Upgrade ==
 
 === Automatic ===
 1. Use the plugin updater in WordPress or...
 
 === Manual ===
-1. Delete the previous `include-tweets-from-twitter` folder from the `/wp-content/plugins/` directory
-2. Upload the new `include-tweets-from-twitter` folder to the `/wp-content/plugins/` directory
+1. Delete the previous `<tweeted folder>` folder from the `/wp-content/plugins/` directory
+2. Upload the new `<tweeted folder>` folder to the `/wp-content/plugins/` directory
 
 == Usage ==
 
-1. Place the Twitter Status URL inside [tweet] shortcode.
+1. Place the Twitter Status URL inside [tweeted] shortcode.
 
 Note: URL has to be in this format from Twitter:
 
 * http://twitter.com/[name]/status/[id number]
 * http://twitter.com/[name]/statuses/[id number]
 
-Filters
-* twitter_tweet_override_output - 2 paramaters
-** $tweet_output - the output that we do
-** $content - the data array
-
 == Change Log ==
 
-= 1.0.0 (2010-01-16): =
+= 1.0.0 (04/21/2010): =
 * Initial Public Release

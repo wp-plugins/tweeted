@@ -13,14 +13,17 @@
 
 .tweeted-info h2, .tweeted-info h2 a {
 	color: #9ac306 !important;
+	text-shadow: 1px 1px 0 #fff !important;
 }
 
 .tweeted-info h3 {
 	color: #000 !important;
+	text-shadow: 1px 1px 0 #ccc !important;
 }
 
 .tweeted-tweet p {
 	color: #000 !important;
+	text-shadow: 1px 1px 0 #fff !important;
 }
 
 .tweeted-tweet a {
