@@ -7,11 +7,20 @@ Stable tag: 1.0.0
 
 == Description ==
 
-This plugin will allow you to easily embed tweets on on a post or page.  Note, this will only embed a single tweet, not the latest tweet.
+This plugin will allow you to easily embed tweets on on a post or page.  Note, this will only embed a single tweet, not the 
 
-It automatically styles the twitter posts to one of the many default designs we offer. A theme can override the twitter post design as well by hooking into a filter. (Read Usage Section)
+latest tweet.
 
-Props to Jonathan Dingman and Dre Armeda (http://wpvibe.com/) for the idea behind this plugin, testing and feedback. Dre Armeda did all of our twitter output designs.
+It automatically styles the twitter posts to one of the many default designs we offer. A theme can override the twitter 
+
+post design as well by hooking into a filter. (Read Usage Section)
+
+Props to Jonathan Dingman and Dre Armeda (http://wpvibe.com/) for the idea behind this plugin, testing and feedback. Dre 
+
+Armeda did all of our twitter output designs.
+
+* Author Homepage: http://wpvibe.com
+* Plugin Homepage: http://tweeted.org
 
 == Installation ==
 
@@ -33,16 +42,13 @@ And that is is!
 == Frequently Asked Questions ==
 
 = How do I use this plugin? =
-Simply include a line in your post or page that looks like this, [tweeted]http://twitter.com/wpvibe/status/12556071704[/tweeted], which has the tweet which you want to embed in it.  (note, this is just an example link, use your own link)
+Simply include a line in your post or page that looks like this, [tweeted]http://twitter.com/wpvibe/status/12556071704
 
-== Upgrade ==
+[/tweeted], which has the tweet which you want to embed in it.  (note, this is just an example link, use your own link)
 
-=== Automatic ===
-1. Use the plugin updater in WordPress or...
+== Upgrade Notice ==
 
-=== Manual ===
-1. Delete the previous `tweeted` folder from the `/wp-content/plugins/` directory
-2. Upload the new `tweeted` folder to the `/wp-content/plugins/` directory
+Use the plugin updater in WordPress or... (1) Delete the previous `tweeted` folder from the `/wp-content/plugins/` directory (2)Upload the new `tweeted` folder to the `/wp-content/plugins/` directory
 
 == Usage ==
 
