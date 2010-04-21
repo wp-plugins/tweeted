@@ -1,7 +1,6 @@
 === Tweeted - Embed Tweets from Twitter ===
 Contributors: ShaneF, jdingman, dremeda
-Author Homepage: http://wpvibe.com
-Plugin Homepage: http://tweeted.org
+Donate link:
 Tags: twitter, tweets, tweet, tweeted, embed, include, post, page
 Requires at least: 2.9
 Tested up to: 3.0.0
@@ -40,15 +39,6 @@ Simply include a line in your post or page that looks like this, [tweeted]http:/
 == Upgrade Notice ==
 
 Use the plugin updater in WordPress or... (1) Delete the previous `tweeted` folder from the `/wp-content/plugins/` directory (2)Upload the new `tweeted` folder to the `/wp-content/plugins/` directory
-
-== Usage ==
-
-1. Place the Twitter Status URL inside [tweeted] shortcode.
-
-Note: URL has to be in this format from Twitter:
-
-* http://twitter.com/[name]/status/[id number]
-* http://twitter.com/[name]/statuses/[id number]
 
 == Change Log ==
 
