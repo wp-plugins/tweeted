@@ -9,19 +9,11 @@ Stable tag: 1.0.0
 
 == Description ==
 
-This plugin will allow you to easily embed tweets on on a post or page.  Note, this will only embed a single tweet, not the 
+This plugin will allow you to easily embed tweets on on a post or page.  Note, this will only embed a single tweet, not the latest tweet.
 
-latest tweet.
+It automatically styles the twitter posts to one of the many default designs we offer. A theme can override the twitter post design as well by hooking into a filter. (Read Usage Section)
 
-It automatically styles the twitter posts to one of the many default designs we offer. A theme can override the twitter 
-
-post design as well by hooking into a filter. (Read Usage Section)
-
-Props to Jonathan Dingman and Dre Armeda (http://wpvibe.com/) for the idea behind this plugin, testing and feedback. Dre 
-
-Armeda did all of our twitter output designs.
-
-
+Props to Jonathan Dingman and Dre Armeda (http://wpvibe.com/) for the idea behind this plugin, testing and feedback. Dre Armeda did all of our twitter output designs.
 
 == Installation ==
 
