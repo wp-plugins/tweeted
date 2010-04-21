@@ -24,10 +24,10 @@ DEFINE ( 'TWEETED_VERSION', '1.0.0' );			//	MAKE SURE THIS MATCHES THE VERSION A
 /*
 **************************************************************************
 Plugin Name:  Tweeted
-Plugin URI:   http://wordpress.org/extend/plugins/tweeted/
+Plugin URI:   http://tweeted.org
 Version:      1.0.0
 Description:  This plugin will let you embed a tweet directly into your post or page, without having to copy the content of the tweet or take a screenshot. Just copy the link to the tweet, such as [tweeted]http://twitter.com/wpvibe/status/8684685314[/tweeted] and the specified tweet will show up.
-Author:       <a href="http://profiles.wordpress.org/shanef/">Shane Froebel</a> (Code), <a href="http://profiles.wordpress.org/dremeda/">Dremeda</a> (Design),  and <a href='http://profiles.wordpress.org/jdingman/'>Jonathan Dingman</a> (Manager) 
+Author:       <a href="http://bugssite.org/">Shane Froebel</a> (Code), <a href="http://armeda.com">Dre Armeda</a> (Design),  and <a href="http://www.jonathan.vc">Jonathan Dingman</a> (Manager) 
 Author URI:	  http://tweeted.org
 **************************************************************************/
 
