@@ -1,5 +1,7 @@
 === Tweeted - Embed Tweets from Twitter ===
 Contributors: ShaneF, jdingman, dremeda
+Author Homepage: http://wpvibe.com
+Plugin Homepage: http://tweeted.org
 Tags: twitter, tweets, tweet, tweeted, embed, include, post, page
 Requires at least: 2.9
 Tested up to: 3.0.0
@@ -19,8 +21,7 @@ Props to Jonathan Dingman and Dre Armeda (http://wpvibe.com/) for the idea behin
 
 Armeda did all of our twitter output designs.
 
-* Author Homepage: http://wpvibe.com
-* Plugin Homepage: http://tweeted.org
+
 
 == Installation ==
 
