@@ -230,6 +230,9 @@ class Tweeted_Frontend extends Tweeted {
 		//	Set Time
 		$time = date($this->get_option('date_format'), strtotime($create_at));
 		
+		//	URL'fy the output
+		$text = $this->url_content($text);
+		
 		//	Source 'no follow'  ... props alxndr
 		$pattern = '/(<a href="[^"]+")(>[^<>]+<\/a>)/';
 		$replacement = '$1 rel="nofollow"$2';
@@ -305,6 +308,21 @@ class Tweeted_Frontend extends Tweeted {
 		
 	}
 	
+	/**
+	 * Make the URL's inside the text linkable.
+	 * @since 1.0.1
+	 * @param $text
+	 * @return string
+	 */
+	function url_content($text) {
+		
+		$text = preg_replace("#(^|[\n ])([\w]+?://[\w]+[^ \"\n\r\t< ]*)#", "\\1<a href=\"\\2\" rel=\"nofollow\">\\2</a>", $text);
+		$text = preg_replace("#(^|[\n ])((www|ftp)\.[^ \"\t\n\r< ]*)#", "\\1<a href=\"http://\\2\" rel=\"nofollow\">\\2</a>", $text);
+		$text = preg_replace("/@(\w+)/", "<a href=\"http://www.twitter.com/\\1\" rel=\"nofollow\">@\\1</a>", $text);
+		$text = preg_replace("/#(\w+)/", "<a href=\"http://search.twitter.com/search?q=\\1\" rel=\"nofollow\">#\\1</a>", $text);
+		return $text;
+		
+	}
 	
 }
 
