@@ -127,8 +127,14 @@ class Tweeted_Frontend extends Tweeted {
 			/** Check to see if it's already stored in the post/page data. **/
 			$twittertweet_tweet_meta_values = get_post_meta($post->ID, '_tweeted_' . $status_id, true);
 			// If we have data already from this post, we should be showing it. No need to re-query Twitter.
+			
+			$update_postmeta = false;
 			if ( is_array($twittertweet_tweet_meta_values) ) {
-				return $this->show_tweet($twittertweet_tweet_meta_values, $status_id);
+				
+				if ( !$this->check_expire( $twittertweet_tweet_meta_values['expire_time'] ) )
+					return $this->show_tweet( $twittertweet_tweet_meta_values['data'], $status_id );
+				
+				$update_postmeta = true;
 			}
 		
 			/**
@@ -137,8 +143,10 @@ class Tweeted_Frontend extends Tweeted {
 			// @todo Change this to the new API address
 			$twitter_ixr = new IXR_Tweeted('http://twitter.com/statuses/show/'.$status_id.'.json');
 			$twitter_ixr->debug = false;	//	only set this to true when debuging Twitter Connection!
-			if ( !$twitter_ixr->query('GET'))
-			    die('Something Went Wrong: '.$twitter_ixr->getErrorCode().' : '.$twitter_ixr->getErrorMessage());
+			if ( !$twitter_ixr->query('GET')) {
+			    return;
+				die('Something Went Wrong: '.$twitter_ixr->getErrorCode().' : '.$twitter_ixr->getErrorMessage());
+			}
 			/** Store the data. **/	
 			$twitter_ixr_data = $twitter_ixr->message;
 			/** Close the IXR connection **/
@@ -169,8 +177,19 @@ class Tweeted_Frontend extends Tweeted {
 				'utc_offset'	=> $twitter_json_data->user->utc_offset,	/** user's UTC offset **/
 			);
 			
-			add_post_meta($post->ID, '_tweeted_' . $status_id, $tweet_array, true);
-		
+			/** Our Data **/
+			$expire_time = strtotime("+" . $this->get_option('expire_time') . " day");
+			$tweeted_data = array(
+				'expire_time'	=>	$expire_time,
+				'data'			=>	$tweet_array
+			);
+			
+			/** Update or Add to the Postmeta **/
+			if ( !$update_postmeta )
+				add_post_meta($post->ID, '_tweeted_' . $status_id, $tweeted_data, true);
+			else
+				update_post_meta($post->ID, '_tweeted_' . $status_id, $tweeted_data);
+			
 			unset($twitter_json_data);
 			return $this->show_tweet($tweet_array, $status_id);
 			
@@ -200,7 +219,7 @@ class Tweeted_Frontend extends Tweeted {
 	 * Show the tweet.
 	 * @since 1.0.0
 	 * @param $content
-	 * @param $status_id [Optionial] The statis ID number.
+	 * @param $status_id [Optionial] The static ID number.
 	 * @return none
 	 */
 	function show_tweet($content, $status_id = '') {
@@ -270,6 +289,22 @@ class Tweeted_Frontend extends Tweeted {
 	 
 		return $posts;
 	}
+	
+	/**
+	 * Check to see we should re-call the Twitter API
+	 * @since 1.0.1
+	 * @param $time
+	 * @return boolean
+	 */
+	function check_expire($time = 0) {
+				
+		if ( (int) $time < time() )
+			return true;
+		
+		return false;
+		
+	}
+	
 	
 }
 

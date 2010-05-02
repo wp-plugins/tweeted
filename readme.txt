@@ -4,7 +4,7 @@ Donate link:
 Tags: twitter, tweets, tweet, tweeted, embed, include, post, page
 Requires at least: 2.9
 Tested up to: 3.0.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 == Description ==
 
@@ -41,6 +41,10 @@ Simply include a line in your post or page that looks like this, [tweeted]http:/
 Use the plugin updater in WordPress or... (1) Delete the previous `tweeted` folder from the `/wp-content/plugins/` directory (2)Upload the new `tweeted` folder to the `/wp-content/plugins/` directory
 
 == Change Log ==
+
+= 1.0.1 =
+* Tweet data will expire and refresh after 10 days (default) to make sure things are updated.
+* Twitter API address change
 
 = 1.0.0 (04/21/2010): =
 * Initial Public Release

@@ -98,21 +98,27 @@ class Tweeted_Admin extends Tweeted {
 	 */
 	function check_upgrade () {
 		if ( version_compare($this->get_option('version'), TWEETED_VERSION, '<') )
-			$this->upgrade(TWEETED_VERSION);
+			$this->upgrade($this->get_option('version'));
 	}
 
 	/**
 	 * Upgrade options
 	 * @since 1.0.0
+	 * @param $ver
 	 * @return none
 	 */
 	function upgrade($ver) {
-		/*
-		if ( $ver == '0.0.0' ) {
-			$twitter_tweets = get_option('twitter_tweets');
+		if ( version_compare($ver, '1.0.1', '<') ) {
+			/** Update Options **/
+			$tweeted_options = get_option('tweeted');
+			$newopts = array (
+				'version'		=>	'1.0.1',
+				'expire_time'	=>	10
+			);
 			
+			unset($tweeted_options['version']);
+			update_option( 'tweeted', array_merge($tweeted_options, $newopts) );
 		}
-		*/
 	}
 
 	/**
@@ -127,6 +133,7 @@ class Tweeted_Admin extends Tweeted {
 			'default_css'	=> 0,
 			'theme'			=> 'dark',
 			'show_props'	=> 1,
+			'expire_time'	=> 10,
 			'date_format'	=> 'M j, Y @ h:i A'
 		);
 		return $defaults;
@@ -239,6 +246,21 @@ class Tweeted_Admin extends Tweeted {
 				</td>
 			</tr>
 			-->
+			<tr valign="top">
+				<th scope="row"><?php _e( 'Refresh Tweet' ); ?></th>
+				<td>
+					<select name="tweeted[expire_time]" id="tweeted_expire" class="postform">
+					<?php
+						for ( $i = 10; $i <= 31; $i++) {
+							echo '<option value="' . $i . '"';
+							selected( $this->get_option('expire_time'), $i );
+							echo '>' . sprintf( __('%s Days'), $i ) . "</option>\n";
+						}
+					?>
+					</select>
+				<br/><?php _e("Select when you would like us to refresh the tweet data from the time it was inserted into the post."); ?>
+				</td>
+			</tr>
 			<tr valign="top">
 				<th scope="row"><?php _e( 'Support Tweeted' ) ?></th>
 				<td>
